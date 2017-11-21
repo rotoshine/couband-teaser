@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>2017.12.09 couband concert teaser</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:site_name" content="Couband Teaser" />
+  <meta property="og:url" content="https://couband-teaser.firebaseapp.com/" />
+  <meta property="og:title" content="Couband 2017 마지막 정기공연" />
+  <meta property="og:image" content="https://couband-teaser.firebaseapp.com/images/mainImage.jpg" />
+  <meta property="og:description" content="12월 09일 복합문화공간 에무">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:title" content="Couband 2017 마지막 정기공연" />
+  <meta name="twitter:image" content="https://couband-teaser.firebaseapp.com/images/mainImage.jpg" />
+  <link rel=”shortcut icon” href=”/images/favicon.ico”>
+  <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="video-background">
+    <div class="video-foreground">
+      <div id="player"></div>
+    </div>
+  </div>
+
+  <div class="poster">
+    <div class="poster-info overlay">
+      <div class="header">
+        <h1>쿠뺀 2017년 마지막 정기공연</h1>
+      </div>
+      <div class="lineup">
+        <h3>LINE UP</h3>
+        <ul class="description-text">
+          <li>6:30</li>
+          <li>어쿠스틱 밤</li>
+          <li>TTB</li>
+          <li>Rocket Express</li>
+        </ul>
+      </div>
+      <div>
+        <h3>DATE &amp; PLACE</h3>
+        <div class="date description-text">2017.12.09 PM 6</div>
+        <div class="place description-text">
+          복합문화공간 에무
+        </div>
+      </div>
+    </div>
+    <div class="play-song overlay">
+      Now Playing :
+      <span id="song-name">Loading..</span>
+    </div>
+  </div>
+  <div class="buttons">
+    <button type="button" id="play-button">
+      <i class="fa fa-2x fa-play"></i>
+    </button>
+    <button type="button" id="mute-button">
+      <i class="fa fa-2x fa-volume-up"></i>
+    </button>
+  </div>
+  <script src='https://www.youtube.com/iframe_api'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+  <script src="/js/firebaseApp.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+
+</html>
