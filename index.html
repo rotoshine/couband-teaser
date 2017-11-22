@@ -1,21 +1,245 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html amp lang="ko">
 
 <head>
   <meta charset="UTF-8">
+  <link rel="amphtml" href="https://couband-teaser.firebaseapp.com/">
+  <link rel="canonical" href="https://couband-teaser.firebaseapp.com/">
   <title>2017.12.09 couband concert teaser</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
   <meta property="og:site_name" content="Couband Teaser" />
   <meta property="og:url" content="https://couband-teaser.firebaseapp.com/" />
-  <meta property="og:title" content="Couband 2017 마지막 정기공연" />
-  <meta property="og:image" content="https://couband-teaser.firebaseapp.com/images/mainImage.jpg" />
+  <meta property="og:title" content="Couband 2017 마무리 정기공연" />
+  <meta property="og:image" content="/images/mainImage.png" />
   <meta property="og:description" content="12월 09일 복합문화공간 에무">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="twitter:title" content="Couband 2017 마지막 정기공연" />
-  <meta name="twitter:image" content="https://couband-teaser.firebaseapp.com/images/mainImage.jpg" />
-  <link rel=”shortcut icon” href=”/images/favicon.ico”>
+  <meta name="twitter:title" content="Couband 2017 마무리 정기공연" />
+  <meta name="twitter:image" content="/images/mainImage.png" />
+  <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <style amp-custom>
+    @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+    * {
+      font-family: 'Hanna', fantasy;
+    }
+
+    html, body {
+      height: 100% !important;
+    }
+
+    #player {
+      background-image: url('/images/mainImage.png');
+      background-position: center;
+      background-size: cover;
+    }
+
+    .video-background {
+      background: #000;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -99;
+    }
+
+    .video-foreground,
+    .video-background iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .poster-wrapper {
+      display: flex;
+      height: 100%;
+    }
+
+    .poster {
+      flex: 1;
+      flex-direction: column;
+      padding: 5px;
+      color: #fff;
+      text-align: center;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      padding: 1rem;
+    }
+
+    .poster h1 {
+      font-size: 5rem;
+      font-weight: 700;
+      margin-top: 0;
+      line-height: 1.2;
+    }
+
+    .poster h3 {
+      font-size: 3rem;
+    }
+
+    .poster .description-text {
+      font-size: 2rem;
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+      .video-foreground {
+        height: 300%;
+        top: -100%;
+      }
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+      .video-foreground {
+        width: 300%;
+        left: -100%;
+      }
+    }
+
+    @media all and (max-width: 600px) {
+      .poster h1 {
+        font-size: 2rem;
+        margin-bottom: .2rem;
+      }
+      .poster h3 {
+        font-size: 1.5rem;
+      }
+
+      .poster .description-text {
+        font-size: 1rem;
+      }
+    }
+
+    .lineup ul {
+      padding: 0;
+    }
+
+    .lineup li {
+      list-style: none
+    }
+
+    #play-button {
+      border: 1px solid #ccc;
+      color: #000;
+      background-color: #fff;
+    }
+
+    #play-next-button {
+      border: 1px solid #ddd;
+      color: #000;
+      background-color: #fff;
+    }
+
+    #mute-button {
+      border: 1px solid #3869e2;
+      color: #fff;
+      background-color: #3869e2;
+    }
+
+    #map {
+      border: 1px solid #ccc;
+      color: #fff;
+      background-color: #999;
+    }
+
+    .buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .buttons button,
+    .buttons a {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "headline": "쿠뺀 2017 마무리 공연",
+      "datePublished": "2017-11-21T18:25:41Z",
+      "image": [
+        "/images/mainImage.png"
+      ]
+    }
+  </script>
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+      to {
+        visibility: visible
+      }
+    }
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
+      }
+    </style>
+  </noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 
 <body>
@@ -24,32 +248,37 @@
       <div id="player"></div>
     </div>
   </div>
-
-  <div class="poster">
-    <div class="poster-info overlay">
-      <div class="header">
-        <h1>쿠뺀 2017년 마지막 정기공연</h1>
-      </div>
-      <div class="lineup">
-        <h3>LINE UP</h3>
-        <ul class="description-text">
-          <li>6:30</li>
-          <li>어쿠스틱 밤</li>
-          <li>TTB</li>
-          <li>Rocket Express</li>
-        </ul>
-      </div>
-      <div>
-        <h3>DATE &amp; PLACE</h3>
-        <div class="date description-text">2017.12.09 PM 6</div>
-        <div class="place description-text">
-          복합문화공간 에무
+  <div class="poster-wrapper">
+    <div class="poster">
+      <div class="poster-info overlay">
+        <div class="header">
+          <h1>쿠뺀 2017년 마무리 정기공연</h1>
+        </div>
+        <div class="lineup">
+          <h3>LINE UP</h3>
+          <ul class="description-text">
+            <li>우쿠우쿠</li>
+            <li>콘덴싱</li>
+            <li>따뜻한 아이스 아메리카노</li>
+            <li>퇴근합니다</li>
+            <li>가젝트</li>
+            <li>어쿠스틱 라자냐</li>
+            <li>삼거리별다방</li>
+            <li>체르노빌 소곡주</li>
+          </ul>
+        </div>
+        <div>
+          <h3>DATE &amp; PLACE</h3>
+          <div class="date description-text">2017.12.09 PM 6</div>
+          <div class="place description-text">
+            복합문화공간 에무
+          </div>
         </div>
       </div>
-    </div>
-    <div class="play-song overlay">
-      Now Playing :
-      <span id="song-name">Loading..</span>
+      <div class="play-song overlay">
+        Now Playing :
+        <span id="song-name">Loading..</span>
+      </div>
     </div>
   </div>
   <div class="buttons">
@@ -59,6 +288,9 @@
     <button type="button" id="mute-button">
       <i class="fa fa-2x fa-volume-up"></i>
     </button>
+    <a id="map" href="http://naver.me/FwHDVlDu" target="_blank">
+      <i class="fa fa-2x fa-map"></i>
+    </a>
   </div>
   <script src='https://www.youtube.com/iframe_api'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>

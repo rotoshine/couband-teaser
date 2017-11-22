@@ -85,6 +85,12 @@ function onPlayerReady(event) {
   player.setShuffle(true);
   player.playVideo();
   player.setLoop(true);
+
+  // mobile
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    player.playVideo();
+    player.mute();
+  }
 }
 
 function onStatusChange(event) {
@@ -100,21 +106,12 @@ function onStatusChange(event) {
   }
 }
 
-function adjustPosterMarginTop(){
-  var $poster = $('.poster');
-  $poster.css({
-    marginTop: -($poster.height() / 2)
-  });
-
-  console.log(-($poster.height() / 2));
-}
-
 // event binding
 $('#mute-button').on('click', function (e) {
+  console.log(muteStatus);
   if (muteStatus) {
     muteStatus = false;
     player.unMute();
-
     $(e.target).find('i.fa')
       .removeClass('fa-volume-off')
       .addClass('fa-volume-up');
@@ -131,6 +128,3 @@ $('#mute-button').on('click', function (e) {
 $('#play-button').on('click', () => {
   player.playVideo();
 });
-
-$(window).on('resize', adjustPosterMarginTop);
-adjustPosterMarginTop();
