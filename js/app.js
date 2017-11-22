@@ -87,7 +87,7 @@ function onPlayerReady(event) {
   player.setLoop(true);
 
   // mobile
-  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     player.playVideo();
     player.mute();
   }
@@ -104,6 +104,13 @@ function onStatusChange(event) {
     player.playVideo();
     $('#song-name').text(nextVideo.name);
   }
+}
+
+function adjustPosterMarginTop() {
+  var $posterWrapper = $('.poster-wrapper');
+  $posterWrapper.css({
+    marginTop: $('body').height() - ($posterWrapper.height() / 2)
+  }).show();
 }
 
 // event binding
@@ -128,3 +135,6 @@ $('#mute-button').on('click', function (e) {
 $('#play-button').on('click', () => {
   player.playVideo();
 });
+
+//$(window).on('resize', adjustPosterMarginTop);
+//adjustPosterMarginTop();
