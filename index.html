@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <link rel="amphtml" href="https://couband-teaser.firebaseapp.com/">
   <link rel="canonical" href="https://couband-teaser.firebaseapp.com/">
-  <title>2017.12.09 couband concert teaser</title>
+  <title>2017.12.09 Couband Winter Concert Teaser</title>
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
   <meta property="og:site_name" content="Couband Teaser" />
   <meta property="og:url" content="https://couband-teaser.firebaseapp.com/" />
-  <meta property="og:title" content="Couband 2017 마무리 정기공연" />
+  <meta property="og:title" content="Couband 2017 겨울 정기공연" />
   <meta property="og:image" content="https://couband-teaser.firebaseapp.com/images/poster.jpg" />
   <meta property="og:image:alt" content="공연 포스터" />
   <meta property="og:description" content="12월 09일 복합문화공간 에무">
-  <meta name="twitter:title" content="Couband 2017 마무리 정기공연" />
+  <meta name="twitter:title" content="Couband 2017 겨울 정기공연" />
   <meta name="twitter:image" content="https://couband-teaser.firebaseapp.com/images/poster.jpg" />
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,7 +21,7 @@
     {
       "@context": "http://schema.org",
       "@type": "NewsArticle",
-      "headline": "쿠뺀 2017 마무리 공연",
+      "headline": "쿠뺀 2017 겨울 공연",
       "datePublished": "2017-11-21T18:25:41Z",
       "dateModified": "2017-11-22T20:38:41Z",
       "image": {
@@ -41,6 +41,7 @@
     }
   </script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <style amp-custom>
     @font-face {
@@ -78,14 +79,13 @@
       pointer-events: none;
     }
 
-    .poster-wrapper {
-      display: flex;
+    .poster-wrapper {      
+      display: none;
     }
 
     .poster {
       flex: 1;
       flex-direction: column;
-      padding: 5px;
       color: #fff;
       text-align: center;
       align-self: center;
@@ -196,12 +196,12 @@
     <div class="video-foreground">
       <div id="player"></div>
     </div>
-  </div>
+  </div>  
   <div class="poster-wrapper">
     <div class="poster">
       <div class="poster-info overlay">
         <div class="header">
-          <h1>쿠뺀 2017년 마무리 정기공연</h1>
+          <h1>쿠뺀 2017년 겨울 정기공연</h1>
         </div>
         <div class="lineup">
           <h3>LINE UP</h3>
@@ -228,9 +228,16 @@
         Now Playing :
         <span id="song-name">Loading..</span>
       </div>
+      <div class="overlay">
+        <amp-facebook-like width=90 height=20
+          layout="fixed"
+          data-layout="button_count"
+          data-href="https://couband-teaser.firebaseapp.com">
+        </amp-facebook-like>
+      </div>
     </div>
   </div>
-  <div class="buttons">
+  <div class="buttons">  
     <button type="button" id="play-button">
       <i class="fa fa-2x fa-play"></i>
     </button>

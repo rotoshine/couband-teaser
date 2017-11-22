@@ -107,34 +107,45 @@ function onStatusChange(event) {
 }
 
 function adjustPosterMarginTop() {
+  console.log('window height', $(window).height());  
   var $posterWrapper = $('.poster-wrapper');
-  $posterWrapper.css({
-    marginTop: $('body').height() - ($posterWrapper.height() / 2)
-  }).show();
+  console.log('poster wrapper height', $posterWrapper.height());
+  
+  const marginTop = ($(window).height() - $posterWrapper.height()) / 2;
+
+  if (marginTop > 0) {
+    $posterWrapper.css({
+      marginTop
+    });
+  }
+
+  $posterWrapper.show();
 }
 
-// event binding
-$('#mute-button').on('click', function (e) {
-  console.log(muteStatus);
-  if (muteStatus) {
-    muteStatus = false;
-    player.unMute();
-    $(e.target).find('i.fa')
-      .removeClass('fa-volume-off')
-      .addClass('fa-volume-up');
+$(document).ready(function () {
+  // event binding
+  $('#mute-button').on('click', function (e) {
+    console.log(muteStatus);
+    if (muteStatus) {
+      muteStatus = false;
+      player.unMute();
+      $(e.target).find('i.fa')
+        .removeClass('fa-volume-off')
+        .addClass('fa-volume-up');
 
-  } else {
-    muteStatus = true;
-    player.mute();
-    $(e.target).find('i.fa')
-      .removeClass('fa-volume-up')
-      .addClass('fa-volume-off');
-  }
+    } else {
+      muteStatus = true;
+      player.mute();
+      $(e.target).find('i.fa')
+        .removeClass('fa-volume-up')
+        .addClass('fa-volume-off');
+    }
+  });
+
+  $('#play-button').on('click', () => {
+    player.playVideo();
+  });
+
+  $(window).on('resize', adjustPosterMarginTop);
+  adjustPosterMarginTop();
 });
-
-$('#play-button').on('click', () => {
-  player.playVideo();
-});
-
-//$(window).on('resize', adjustPosterMarginTop);
-//adjustPosterMarginTop();
